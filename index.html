@@ -46,7 +46,7 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- utility ---------- */
 .wrap{width:min(1180px,92%);margin:0 auto}
-.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--honey)}
+.eyebrow{display:inline-flex;align-items:center;gap:.8rem;font-size:.72rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--honey)}
 .eyebrow::before,.eyebrow::after{content:"";width:26px;height:1px;background:var(--honey);opacity:.6}
 .eyebrow.left::before{display:none}
 h1,h2,h3,.serif{font-family:var(--serif)}
@@ -68,7 +68,7 @@ section{position:relative}
 .btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 36px -8px rgba(37,211,102,.55)}
 .btn-gold{background:linear-gradient(135deg,var(--honey-light),var(--honey) 55%,var(--honey-deep));color:#241608;box-shadow:0 10px 30px -8px rgba(230,168,23,.4)}
 .btn-gold:hover{transform:translateY(-2px)}
-.btn-ghost{border:1px solid var(--line);color:var(--cream)}
+.btn-ghost{border:1px solid rgba(230,168,23,.4);color:var(--cream)}
 .btn-ghost:hover{border-color:var(--honey);color:var(--honey)}
 .btn svg{width:19px;height:19px;flex:none}
 
@@ -118,7 +118,7 @@ header.scrolled{background:rgba(21,13,5,.92);backdrop-filter:blur(14px);padding:
 .chip svg{width:13px;height:13px;color:var(--honey)}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
 .hero-jar{position:relative;text-align:center}
-.hero-jar img{width:min(380px,80%);margin:0 auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,.6));border-radius:12px;animation:float 6s ease-in-out infinite}
+.hero-jar img{width:min(380px,80%);margin:0 auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,.6));border-radius:16px;border:1px solid rgba(230,168,23,.5);box-shadow:0 30px 70px -20px rgba(0,0,0,.7), inset 0 0 0 1px rgba(247,239,216,.05);animation:float 6s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
 .hero-jar::before{content:"";position:absolute;inset:12%;background:radial-gradient(closest-side,rgba(230,168,23,.28),transparent 70%);filter:blur(30px);z-index:-1}
 .bee{position:absolute;z-index:3;width:54px;pointer-events:none;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
@@ -139,7 +139,7 @@ header.scrolled{background:rgba(21,13,5,.92);backdrop-filter:blur(14px);padding:
 .karak-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 .karak-imgs{position:relative}
 .karak-imgs .main{border-radius:14px;overflow:hidden;box-shadow:var(--shadow-lg);transform:rotate(-1.6deg)}
-.karak-imgs .main img{aspect-ratio:4/4.6;object-fit:cover;width:100%}
+.karak-imgs .main img{aspect-ratio:7/10;object-fit:cover;width:100%}
 .karak-imgs .float{position:absolute;width:46%;right:-8%;bottom:-9%;border-radius:12px;overflow:hidden;border:5px solid var(--espresso);box-shadow:var(--shadow-lg);transform:rotate(2.4deg)}
 .karak-imgs .float img{aspect-ratio:1/1;object-fit:cover;width:100%}
 .pin{position:absolute;top:-1.4rem;left:-1.4rem;width:92px;height:92px;animation:spinSlow 26s linear infinite}
@@ -159,8 +159,8 @@ header.scrolled{background:rgba(21,13,5,.92);backdrop-filter:blur(14px);padding:
 .jar-stage .glow{position:absolute;width:70%;aspect-ratio:1;background:radial-gradient(closest-side,rgba(230,168,23,.25),transparent 72%);filter:blur(34px)}
 .hexframe{position:relative;width:min(430px,86vw)}
 .hexframe svg.framehex{width:100%;height:auto;display:block;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55))}
-.hexframe .jarphoto{position:absolute;inset:11%;border-radius:50%;overflow:hidden}
-.hexframe .jarphoto img{width:100%;height:100%;object-fit:cover}
+.hexframe .jarphoto{position:absolute;inset:11%;border-radius:50%;overflow:hidden;background:var(--bark)}
+.hexframe .jarphoto img{width:100%;height:100%;object-fit:cover;object-position:58% 45%;transform:scale(1.03)}
 .tilt{transform-style:preserve-3d;transition:transform .3s ease-out}
 .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
 .feat{border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem;background:rgba(21,13,5,.5);transition:.3s}
@@ -229,9 +229,9 @@ header.scrolled{background:rgba(21,13,5,.92);backdrop-filter:blur(14px);padding:
 .soc:hover{border-color:var(--honey);color:var(--honey)}
 .soc svg{width:17px;height:17px;color:#ff0033}
 .soc.tt svg{color:#25f4ee}
-.contact-photo{border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg);position:relative}
+.contact-photo{border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg);position:relative;border:1px solid var(--line)}
 .contact-photo img{width:100%;aspect-ratio:4/4.3;object-fit:cover}
-.contact-photo .cp-badge{position:absolute;left:1.2rem;bottom:1.2rem;right:1.2rem;background:rgba(21,13,5,.82);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem;display:flex;gap:.9rem;align-items:center}
+.contact-photo .cp-badge{position:relative;margin:0;padding:1.1rem 1.2rem;background:var(--bark);border-top:1px solid var(--line);border-radius:0 0 18px 18px;display:flex;gap:.9rem;align-items:center}
 .contact-photo .cp-badge svg{width:30px;height:30px;color:var(--honey);flex:none}
 .contact-photo .cp-badge b{display:block;font-size:.93rem}
 .contact-photo .cp-badge span{font-size:.78rem;color:var(--cream-dim)}
@@ -359,7 +359,7 @@ footer{background:#0e0803;border-top:1px solid var(--line);padding:3.5rem 0 6.5r
       </div>
     </div>
     <div class="hero-jar rv in">
-      <img src="assets/img/jar_sk_hero.png" alt="Pure SK Honey jar with wooden dipper">
+      <img src="assets/img/jar_sk_hero.png" alt="Pure SK Honey jar with burlap cover and 100% pure honey tag">
     </div>
   </div>
 </section>
@@ -386,7 +386,7 @@ footer{background:#0e0803;border-top:1px solid var(--line);padding:3.5rem 0 6.5r
         <text x="50" y="16" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="2" fill="#e6a817">KARAK · KP</text>
         <text x="50" y="90" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="2" fill="#e6a817">33.11°N 71.09°E</text>
       </svg>
-      <div class="main"><img src="assets/img/jar_labeled.png" alt="Jar of pure SK Honey from Karak"></div>
+      <div class="main"><img src="assets/img/karak_beekeeper.png" alt="Beekeeper tending his hives in the hills of Karak"></div>
     </div>
     <div>
       <span class="eyebrow left rv">Why Karak honey</span>
@@ -432,7 +432,7 @@ footer{background:#0e0803;border-top:1px solid var(--line);padding:3.5rem 0 6.5r
             <polygon points="200,22 372,121 372,339 200,438 28,339 28,121" fill="none" stroke="url(#goldStroke)" stroke-width="3"/>
             <polygon points="200,40 356,130 356,330 200,420 44,330 44,130" fill="none" stroke="#e6a817" stroke-opacity=".25" stroke-width="1"/>
           </svg>
-          <div class="jarphoto"><img src="assets/img/jar_label32.png" alt="SK Honey jar"></div>
+          <div class="jarphoto"><img src="assets/img/jar_label32.png" alt="Bowl of golden SK Honey with dipper and honeycomb"></div>
         </div>
       </div>
       <div>
@@ -496,8 +496,8 @@ footer{background:#0e0803;border-top:1px solid var(--line);padding:3.5rem 0 6.5r
     </div>
     <div class="uses-grid">
       <div class="use rv"><img src="assets/img/dipper_drizzle3.png" alt="Honey drizzling from a wooden dipper"><div class="u-body"><h3>Golden on everything</h3><p>Paratha, halwa, warm milk, desserts — a drizzle of Karak honey makes it better.</p></div></div>
-      <div class="use rv d1"><img src="assets/img/honey_flow.png" alt="Golden honey flowing"><div class="u-body"><h3>Pure liquid gold</h3><p>Thick, rich and unprocessed — honey exactly as it came from the comb.</p></div></div>
-      <div class="use rv d2"><img src="assets/img/pot_ceramic.png" alt="Honey pot pouring"><div class="u-body"><h3>A spoon a day</h3><p>The household classic — one spoonful morning or night, straight from the pot.</p></div></div>
+      <div class="use rv d1"><img src="assets/img/drizzle_bowl.png" alt="Honey pouring from a wooden dipper into a glass bowl"><div class="u-body"><h3>Pure liquid gold</h3><p>Thick, rich and unprocessed — poured slow, exactly as it came from the comb.</p></div></div>
+      <div class="use rv d2"><img src="assets/img/honey_pot.png" alt="A pot of golden Karak honey fresh from the hive"><div class="u-body"><h3>A spoon a day</h3><p>The household classic — one spoonful morning or night, straight from the pot.</p></div></div>
     </div>
   </div>
 </section>
@@ -579,7 +579,7 @@ footer{background:#0e0803;border-top:1px solid var(--line);padding:3.5rem 0 6.5r
       </div>
     </div>
     <div class="contact-photo rv d1">
-      <img src="assets/img/jar34.png" alt="Jar of pure SK Honey">
+      <img src="assets/img/jar34.png" alt="SK Honey brand emblem with bee monogram">
       <div class="cp-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c4 4.5 7 7.6 7 11a7 7 0 1 1-14 0c0-3.4 3-6.5 7-11z"/></svg>
         <div><b>From the mountains of Karak</b><span>Khyber Pakhtunkhwa, Pakistan</span></div>
