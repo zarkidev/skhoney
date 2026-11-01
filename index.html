@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SK Honey Brand — 100% Pure & Natural Honey from Karak, Pakistan</title>
-<meta name="description" content="SK Honey Brand — pure, natural honey from the mountains of Karak, Khyber Pakhtunkhwa. 100% pure, no added sugar. Order on WhatsApp: +92 301 9547470.">
+<meta name="description" content="SK Honey Brand — pure, natural honey from the mountains of Karak, Khyber Pakhtunkhwa. 500g jar Rs 2,100, 1Kg jar Rs 4,200 with free delivery. Order on WhatsApp: +92 301 9547470.">
 <meta property="og:title" content="SK Honey Brand — 100% Pure & Natural Honey from Karak">
 <meta property="og:description" content="Nature's sweetest gift. Pure honey from the mountains of Karak, Pakistan. No added sugar. Order on WhatsApp.">
 <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"SK Honey Brand","description":"100% pure and natural honey from the mountains of Karak, Khyber Pakhtunkhwa, Pakistan.","email":"skbrandcompany2022@gmail.com","telephone":"+923019547470","areaServed":"Pakistan","address":{"@type":"PostalAddress","addressRegion":"Khyber Pakhtunkhwa","addressCountry":"PK"}}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"SK Honey Brand","description":"100% pure and natural honey from the mountains of Karak, Khyber Pakhtunkhwa, Pakistan.","email":"skbrandcompany2022@gmail.com","telephone":"+923019547470","priceRange":"Rs 2,100–4,200","areaServed":"Pakistan","address":{"@type":"PostalAddress","addressRegion":"Khyber Pakhtunkhwa","addressCountry":"PK"}}
 </script>
 <style>
 :root{
@@ -171,6 +171,22 @@ header.scrolled{background:rgba(21,13,5,.92);backdrop-filter:blur(14px);padding:
 .price-note{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.8rem;font-size:.88rem;color:var(--cream-dim);border:1px dashed var(--line);border-radius:999px;padding:.55rem 1.1rem}
 .price-note svg{width:16px;height:16px;color:var(--honey)}
 
+/* ---------- pricing cards ---------- */
+.prices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem;max-width:840px;margin:0 auto}
+.pcard{position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:linear-gradient(180deg,rgba(36,22,8,.55),rgba(21,13,5,.4));transition:.3s}
+.pcard:hover{transform:translateY(-6px);border-color:var(--honey);box-shadow:0 26px 60px -20px rgba(0,0,0,.65)}
+.pcard .pimg{position:relative;aspect-ratio:.9;overflow:hidden;background:var(--bark)}
+.pcard .pimg .fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(20px) saturate(1.15) brightness(.75);transform:scale(1.15)}
+.pcard .pimg .jar{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:5% 8%;filter:drop-shadow(0 22px 34px rgba(0,0,0,.55));transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.pcard:hover .pimg .jar{transform:scale(1.05)}
+.pcard .pbody{padding:1.45rem 1.5rem 1.6rem;text-align:center}
+.pcard .psize{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--serif);font-size:1.3rem;font-weight:700}
+.pcard .psize::before,.pcard .psize::after{content:"";width:18px;height:1px;background:var(--honey);opacity:.55}
+.pcard .pprice{font-family:var(--serif);font-size:2.15rem;font-weight:800;color:var(--honey);line-height:1.1;margin:.45rem 0 .15rem}
+.pcard .pship{font-size:.8rem;letter-spacing:.05em;color:var(--cream-dim)}
+.pcard .btn{margin-top:1.15rem;justify-content:center;width:100%;padding:.85rem 1.2rem;font-size:.9rem}
+.pcard .free-tag{position:absolute;top:1rem;left:1rem;z-index:2;font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#241608;background:linear-gradient(135deg,var(--honey-light),var(--honey));border-radius:999px;padding:.34rem .8rem;box-shadow:0 8px 20px -6px rgba(230,168,23,.5)}
+
 /* ---------- process ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;counter-reset:st}
 .step{position:relative;border:1px solid var(--line);border-radius:16px;padding:2rem 1.4rem 1.6rem;background:linear-gradient(180deg,rgba(36,22,8,.5),rgba(21,13,5,.4));overflow:hidden;transition:.3s}
@@ -277,6 +293,7 @@ footer{background:#0e0803;border-top:1px solid var(--line);padding:3.5rem 0 6.5r
 }
 @media(max-width:640px){
   .steps,.uses-grid,.order-cards,.f-grid{grid-template-columns:1fr}
+  .prices{grid-template-columns:1fr;max-width:420px}
   .feat-grid{grid-template-columns:1fr}
   .karak-imgs .float{width:52%;right:0}
   .f-bottom{justify-content:center;text-align:center}
@@ -367,8 +384,8 @@ footer{background:#0e0803;border-top:1px solid var(--line);padding:3.5rem 0 6.5r
 <!-- ===================== MARQUEE ===================== -->
 <div class="marquee" aria-hidden="true">
   <div class="mq-track">
-    <span><i></i>100% Pure &amp; Natural</span><span><i></i>No Added Sugar</span><span><i></i>From Karak, Khyber Pakhtunkhwa</span><span><i></i>Natural &amp; Healthy</span><span><i></i>Nature's Sweetest Gift</span>
-    <span><i></i>100% Pure &amp; Natural</span><span><i></i>No Added Sugar</span><span><i></i>From Karak, Khyber Pakhtunkhwa</span><span><i></i>Natural &amp; Healthy</span><span><i></i>Nature's Sweetest Gift</span>
+    <span><i></i>100% Pure &amp; Natural</span><span><i></i>No Added Sugar</span><span><i></i>From Karak, Khyber Pakhtunkhwa</span><span><i></i>Natural &amp; Healthy</span><span><i></i>Nature's Sweetest Gift</span><span><i></i>Free Delivery on 1Kg Jars</span>
+    <span><i></i>100% Pure &amp; Natural</span><span><i></i>No Added Sugar</span><span><i></i>From Karak, Khyber Pakhtunkhwa</span><span><i></i>Natural &amp; Healthy</span><span><i></i>Nature's Sweetest Gift</span><span><i></i>Free Delivery on 1Kg Jars</span>
   </div>
 </div>
 
@@ -458,12 +475,40 @@ footer{background:#0e0803;border-top:1px solid var(--line);padding:3.5rem 0 6.5r
         </div>
         <div class="price-note rv d3">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5"/></svg>
-          Sizes &amp; prices on WhatsApp — message us and we'll fix you up today.
+          Two honest sizes — straight from Karak to your door. Pick yours below.
         </div>
-        <div class="hero-ctas rv d3" style="margin-top:1.6rem">
-          <a class="btn btn-gold" href="https://wa.me/923019547470?text=Assalam%20o%20Alaikum!%20Please%20share%20SK%20Honey%20sizes%20and%20prices%20%F0%9F%8D%AF">
-            Get Sizes &amp; Prices
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </div>
+    </div>
+    <h3 class="serif rv" style="text-align:center;font-size:clamp(1.5rem,3vw,2.1rem);margin-top:4.5rem">Choose your <span class="gold">jar</span></h3>
+    <div class="prices" style="margin-top:2.2rem">
+      <div class="pcard rv">
+        <div class="pimg">
+          <img class="fill" src="assets/img/jar_500g.png" alt="" aria-hidden="true">
+          <img class="jar" src="assets/img/jar_500g.png" alt="SK Pure Karak Honey 500g jar with honeycomb and dipper">
+        </div>
+        <div class="pbody">
+          <span class="psize">500 g jar</span>
+          <div class="pprice">Rs 2,100</div>
+          <span class="pship">+ Rs 150 delivery</span>
+          <a class="btn btn-wa" href="https://wa.me/923019547470?text=Assalam%20o%20Alaikum!%20I%20want%20to%20order%20SK%20Honey%20500g%20%28Rs%202%2C100%20%2B%20Rs%20150%20delivery%29%20%F0%9F%8D%AF">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1a16 16 0 0 1-1.6-.6c-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4s.7 1.7.8 1.9c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.4.1.1.1.8-.2 1.5z"/></svg>
+            Order 500 g — Rs 2,100
+          </a>
+        </div>
+      </div>
+      <div class="pcard rv d1">
+        <span class="free-tag">Free Delivery</span>
+        <div class="pimg">
+          <img class="fill" src="assets/img/jar_1kg.png" alt="" aria-hidden="true">
+          <img class="jar" src="assets/img/jar_1kg.png" alt="SK Pure Karak Honey 1Kg jar">
+        </div>
+        <div class="pbody">
+          <span class="psize">1 Kg jar</span>
+          <div class="pprice">Rs 4,200</div>
+          <span class="pship">free delivery — best value</span>
+          <a class="btn btn-wa" href="https://wa.me/923019547470?text=Assalam%20o%20Alaikum!%20I%20want%20to%20order%20SK%20Honey%201Kg%20%28Rs%204%2C200%2C%20free%20delivery%29%20%F0%9F%8D%AF">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1a16 16 0 0 1-1.6-.6c-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4s.7 1.7.8 1.9c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.4.1.1.1.8-.2 1.5z"/></svg>
+            Order 1 Kg — Rs 4,200
           </a>
         </div>
       </div>
@@ -515,8 +560,8 @@ footer{background:#0e0803;border-top:1px solid var(--line);padding:3.5rem 0 6.5r
       <div class="oc rv">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1.6"/><circle cx="18" cy="21" r="1.6"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 7H6"/></svg></span>
         <h3 class="serif">For your home</h3>
-        <p>A jar for the family table — message us for today's sizes and prices, delivered to your address.</p>
-        <a class="btn btn-wa" href="https://wa.me/923019547470?text=Assalam%20o%20Alaikum!%20I%20want%20to%20order%20SK%20Honey%20for%20my%20home.%20Please%20share%20sizes%20and%20prices%20%F0%9F%8D%AF">Order for my home</a>
+        <p>A jar for the family table — 500g or 1Kg, pure Karak honey delivered to your address.</p>
+        <a class="btn btn-wa" href="https://wa.me/923019547470?text=Assalam%20o%20Alaikum!%20I%20want%20to%20order%20SK%20Honey%20for%20my%20home%20%F0%9F%8D%AF">Order for my home</a>
       </div>
       <div class="oc rv d1">
         <span class="tag">Popular</span>
@@ -545,7 +590,7 @@ footer{background:#0e0803;border-top:1px solid var(--line);padding:3.5rem 0 6.5r
     <div class="faq-list">
       <div class="fq rv"><button>Is SK Honey really 100% pure?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button><div class="a"><div>Yes — our honey comes from our own hives in Karak with nothing added: no sugar, no syrup, no water. Just honey as the bees made it, which is exactly why our customers come back.</div></div></div>
       <div class="fq rv d1"><button>Why is Karak honey famous in Pakistan?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button><div class="a"><div>Karak district in Khyber Pakhtunkhwa is one of the country's best-known honey regions — its dry hills and wild flora give the honey a distinctive richness. When Pakistanis want pure honey, Karak is the name they look for.</div></div></div>
-      <div class="fq rv d1"><button>How do I order, and what are the prices?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button><div class="a"><div>One WhatsApp message is all it takes — tap any Order button and it opens a chat with your message pre-written. We'll reply with available sizes, current prices and delivery time.</div></div></div>
+      <div class="fq rv d1"><button>How do I order, and what are the prices?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button><div class="a"><div>Tap any Order button and it opens a WhatsApp chat with your message pre-written. Current prices: 500g jar Rs 2,100 (+ Rs 150 delivery) and 1Kg jar Rs 4,200 with free delivery. We'll confirm delivery time in chat.</div></div></div>
       <div class="fq rv d2"><button>Do you deliver outside Karak?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button><div class="a"><div>Message us your city on WhatsApp and we'll confirm the fastest way to get jars to you — we regularly send honey to customers across Pakistan.</div></div></div>
       <div class="fq rv d2"><button>My honey crystallised — is it still good?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button><div class="a"><div>Completely — crystallisation is natural in real, unprocessed honey and a good sign of purity. Stand the jar in warm (not boiling) water and it will return to liquid.</div></div></div>
     </div>
